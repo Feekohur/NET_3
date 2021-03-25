@@ -1,0 +1,26 @@
+﻿@page
+@model NET_3.Pages.AddressModel
+@{
+}
+
+<p>Ostatnio szukane</p>
+@if (Model.Address != null)
+{
+   
+<p>
+    @Html.DisplayNameFor(model => Model.Address.Number):
+@Model.Address.Number
+</p>
+
+<p>
+    @Html.DisplayNameFor(model => Model.Address.Result):
+    @Model.Address.Result
+</p>
+
+<p>
+    @Html.DisplayNameFor(model => Model.Address.Date):
+    @Model.Address.Date
+</p>
+
+}
+
