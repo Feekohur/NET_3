@@ -20,6 +20,8 @@ namespace NET_3.Models
         [Required(ErrorMessage = "Podaj miasto")]
         public string City { get; set; }*/
 
+        public int Id { get; set; }
+
         [Display(Name = "Number")]
         [Required]
         [Range(1, 1000)]

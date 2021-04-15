@@ -17,7 +17,7 @@
     </form>
 
 
-   
+
 
 </div>
 
@@ -49,6 +49,20 @@
     }
 
 }
+
+@if (Model.Addresses != null) {
+
+@foreach (var item in Model.Addresses)
+{
+    <p>
+        @Html.DisplayFor(modelItem => item.Number)
+        @Html.DisplayFor(modelItem => item.Result)
+        @Html.DisplayFor(modelItem => item.Date)
+    </p>
+}
+}
+
+
 
 
 <!--<span asp-validation-for="Address.Street" class="text-danger"></span>
@@ -93,4 +107,3 @@
         <button type="submit" class="btn btn-primary">Zatwierdź</button>
     </div>
 </div>-->
-
