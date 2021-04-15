@@ -39,7 +39,10 @@ namespace NET_3.Pages
         {
             if (ModelState.IsValid)
             {
+<<<<<<< HEAD
                 Address.MakesValues(Address.Number);
+=======
+>>>>>>> cfb215f857cef75247371bb85167cd6fb5e0548f
                 HttpContext.Session.SetString("Ostatnio szukane", JsonConvert.SerializeObject(Address));
                 //return RedirectToPage("./Address");
                 return Page();
