@@ -29,7 +29,6 @@ public string Result { get; set; }
 
         public DateTime Date { get; set; }
 
-<<<<<<< HEAD
         public Address()
         {
 
@@ -63,8 +62,6 @@ public string Result { get; set; }
 
         }
 
-=======
->>>>>>> cfb215f857cef75247371bb85167cd6fb5e0548f
 
     }
 }
