@@ -8,6 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using NET_3.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace NET_3
 {
@@ -23,6 +26,10 @@ namespace NET_3
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<AddressContext>(options => {
+                options.UseSqlServer(Configuration.GetConnectionString("Database1"));
+            });
+            //services.AddIdentity<IdentityUser, IdentityRole>();
             services.AddRazorPages();
             //services.AddDistributedMemoryCache();
             services.AddMemoryCache();
@@ -55,7 +62,7 @@ namespace NET_3
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
